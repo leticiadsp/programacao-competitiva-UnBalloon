@@ -46,7 +46,7 @@ int main(){
     }
     dijkstra(1);
 
-    for(int i = 1; i <=n; i++) cout << dist[i] << endl;
+    for(int i = 1; i <=n; i++) cout << dist[i] << " ";
 
 
 }
