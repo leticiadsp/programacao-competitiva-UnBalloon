@@ -7,12 +7,12 @@ const int n = 1e5+1;
 
 int pai[n];
 vector<int>g[n];
-const int logn = 17;
+const int logn = 25;
 
-vector<vector<int>> up (17, vector<int>(n)); // up[i][v] = 2**i - passo de v
+int up [logn][n]; // up[i][v] = 2**i - passo de v
 
 int get_k_ancestral(int u, int k){
-    for(int i = logn - 1; i--; i>= 0){
+    for(int i = logn - 1; i>= 0; i--){
         int passos = (1<<i); // 1<<i = 2**i
         if(passos <= k){
             k-=passos;
